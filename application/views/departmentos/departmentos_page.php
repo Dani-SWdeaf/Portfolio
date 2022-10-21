@@ -33,7 +33,7 @@
     <!-- Bootstrap 4 -->
     <!-- AdminLTE App -->
     <!-- AdminLTE for demo purposes -->
-    <?php $this->load->view("js/javascript"); ?>
+    <?php $data_js['show_modal'] = true; $this->load->view("js/javascript", $data_js); ?>
 </body>
 
 </html>

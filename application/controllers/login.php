@@ -32,7 +32,7 @@ class login extends CI_Controller {
 				else
 				{
 					$this->session->set_flashdata('error_login', $existe_user['message']);
-					redirect('home');
+					redirect('login');
 				}
 			}
 			else

@@ -18,6 +18,15 @@
     $(function()
     {
         $('#table_departments').DataTable();
+
+        <?php if ($this->session->flashdata('error_form')) { ?>
+            $('#modal-form-dep').modal('show');
+        <?php } ?>
+
+        <?php if(@$show_modal) { ?>
+            $('#modal-form-dep').modal('show');
+        <?php } ?>
     });
+
 
 </script>

@@ -56,4 +56,13 @@ class DAO extends CI_Model
         
         return $query->result();
     }
+
+    function getDepartmentById($id)
+    {
+        $this->db->where('id_department', $id);
+
+        $query = $this->db->get('departments');
+
+        return $query->result();
+    }
 }

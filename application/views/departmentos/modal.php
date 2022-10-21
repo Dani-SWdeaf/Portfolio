@@ -15,19 +15,34 @@
                     <div class="col-12">
                         <div class="form-group">
                             <label for="name_department">Nombre: </label>
-                            <input type="text" class="form-control" name="name_department" id="name_department">
+                            <input type="text" class="form-control" name="name_department" id="name_department" value="<?= @$this->session->flashdata('current_data')['name_department']; ?>">
+                            <?php if (@$this->session->flashdata('error_form')['name_department']) { ?>
+                                <span class="text-danger float-right">
+                                    <?= $this->session->flashdata('error_form')['name_department']; ?>
+                                </span>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-9">
                         <div class="form-group">
                             <label for="responsable_department">Responsable: </label>
-                            <input type="text" class="form-control" name="responsable_department" id="responsable_department">
+                            <input type="text" class="form-control" name="responsable_department" id="responsable_department" value="<?= @$this->session->flashdata('current_data')['responsable_department']; ?>">
+                            <?php if (@$this->session->flashdata('error_form')['responsable_department']) { ?>
+                                <span class="text-danger float-right">
+                                    <?= $this->session->flashdata('error_form')['responsable_department']; ?>
+                                </span>
+                            <?php } ?>
                         </div>
                     </div>
                     <div class="col-3">
                         <div class="form-group">
                             <label for="ext_department">No. Ext: </label>
-                            <input type="text" class="form-control" name="ext_department" id="ext_department">
+                            <input type="text" class="form-control" name="ext_department" id="ext_department" value="<?= @$this->session->flashdata('current_data')['ext_department']; ?>">
+                            <?php if(@$this->session->flashdata('error_form')['ext_department']) { ?>
+                                <span class="text-danger float-right">
+                                    <?= $this->session->flashdata('error_form')['ext_department']; ?>
+                                </span>
+                            <?php } ?>
                         </div>
                     </div>
                 </div>

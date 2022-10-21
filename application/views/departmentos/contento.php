@@ -53,7 +53,14 @@
                                         <td><?= $d->responsable_department; ?></td>
                                         <td><?= $d->ext_department; ?></td>
                                         <td><?= $d->status_department; ?></td>
-                                        <td></td>
+                                        <td>
+                                            <a href="<?= base_url('departmentos/ver_detalle?clave='.$d->id_department).'&accion=editar'; ?>" class="btn btn-primary">
+                                                <i class="fas fa-edit"></i>
+                                            </a>
+                                            <a href="<?= base_url('departmentos/ver_detalle?clave='.$d->id_department).'&accion=eliminar'; ?>" class="btn btn-danger">
+                                                <i class="fas fa-trash"></i>
+                                            </a>
+                                        </td>
                                     </tr>
                                 <?php } ?>
                             </tbody>
