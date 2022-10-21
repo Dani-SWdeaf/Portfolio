@@ -11,7 +11,14 @@ class departmentos extends CI_Controller {
 
 	public function index()
 	{
-		$this->load->view('departmentos/departmentos_page');
+		$data['departments_list'] = $this->DAO->getDepartments();
+		$this->load->view('departmentos/departmentos_page', $data);
+	}
+
+	function guardarDepartment()
+	{
+		$this->DAO->guardarDepartment($this->input->post());
+		redirect('departmentos');
 	}
 
 	private function _check_session()

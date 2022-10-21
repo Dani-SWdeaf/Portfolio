@@ -18,16 +18,17 @@
 
     <!-- Content Wrapper. Contains page content -->
     <?php $this->load->view("departmentos/contento"); ?>
-
+    
+    
     <!-- /.content-wrapper -->
     <?php $this->load->view("includes/footer"); ?>
-
+    
     <!-- Control Sidebar -->
     <?php $this->load->view("includes/aside_sidebar"); ?>
-
+    
     <?php $this->load->view("includes/fin_wrapper"); ?>
     <!-- /.control-sidebar -->
-
+    
     <!-- jQuery -->
     <!-- Bootstrap 4 -->
     <!-- AdminLTE App -->

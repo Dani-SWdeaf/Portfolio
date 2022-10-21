@@ -42,4 +42,18 @@ class DAO extends CI_Model
             );
         }
     }
+
+    function guardarDepartment($data)
+    {
+        //insert into tb_departments() values ();
+        $this->db->insert('departments', $data);
+    }
+
+    function getDepartments()
+    {
+        //Select * from tb_departments;
+        $query = $this->db->get('departments');
+        
+        return $query->result();
+    }
 }
